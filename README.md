@@ -1,0 +1,2 @@
+# photobooth
+Wedding photobooth
