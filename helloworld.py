@@ -44,6 +44,10 @@ class pyscope :
         self.screen.fill((0, 0, 0))        
         # Initialise font support
         pygame.font.init()
+	# Hide the mouse cursor
+	pygame.mouse.set_visible(False)
+	# Set caption
+	pygame.display.set_caption('Tatiana y Albert')
         # Render the screen
         pygame.display.update()
 
@@ -52,8 +56,13 @@ class pyscope :
 
     def test(self):
         # Fill the screen with red (255, 0, 0)
-        red = (255, 0, 0)
-        self.screen.fill(red)
+        #red = (255, 0, 0)
+        #self.screen.fill(red)
+        filename = "/home/pi/ftp/files/test/test_file.jpg"
+	print filename
+	img=pygame.image.load(filename).convert()
+	#img=pygame.transform.scale(img,(1080,720))	
+	self.screen.blit(img,(10,10))
         # Update the display
         pygame.display.update()
 
