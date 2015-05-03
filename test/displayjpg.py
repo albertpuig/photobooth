@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
+import sys
+import traceback
 import time
 import pygame
 from signal import alarm, signal, SIGALRM, SIGKILL
 
-now = "20140516121953"
-total_pics = 4 # number of pics  to be taken
+now = "20150501221156"
+total_pics = 1 # number of pics  to be taken
 w = 800
 h = 450
 transform_x = 600 #how wide to scale the jpg when replaying
@@ -34,7 +36,7 @@ def display_pics(jpg_group):
     pygame.mouse.set_visible(False) #hide the mouse cursor	
     for i in range(0, replay_cycles): #show pics a few times
 		for i in range(1, total_pics+1): #show each pic
-			filename = jpg_group + "-0" + str(i) + ".jpg"
+			filename = "/home/pi/ftp/files/test/test_file.jpg"
 			print filename
 			img=pygame.image.load(filename) 
 			img = pygame.transform.scale(img,(transform_x,transfrom_y))
