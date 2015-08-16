@@ -133,6 +133,7 @@ class photobooth :
 print ("Photobooth startup")
 wedding = photobooth()
 wedding.test()
+# missed button trigger and while loop
 time.sleep(2)
 wedding.takepic()
 time.sleep(6)
